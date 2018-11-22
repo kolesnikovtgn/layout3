@@ -21,10 +21,6 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-body {
-
-}
-
 .topline {
   background-color: #9B51E0;
   width: 100%;
@@ -64,11 +60,11 @@ body {
   height: 48px;
   border: solid 3px #FFC740;
   position: absolute;
-  margin-top: 30px;
+  margin-top: 3.125%;
 }
 
 .header__text {
-  margin: 42px 0 0 25px;
+  margin: 4.375% 0 0 2.604%;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 2.8rem;
@@ -79,9 +75,8 @@ body {
 }
 
 .header__search {
-  margin: 40px 0 0 760px;
+  margin-top: 35px;
   max-width: 201px; /*20.9375%;*/
-  position: absolute;
 }
 
 .header__search-input {
@@ -90,6 +85,7 @@ body {
   border: solid 1px #6D3D99;
   border-right: 0px;
   margin: 0;
+  padding: 0;
 }
 
 .header__search-button {
@@ -101,8 +97,8 @@ body {
   color: #FFFFFF;
   outline: none;
   margin: 0;
+  padding: 0;
 }
-
 
 .navbar {
   font-size: 1.4rem;
