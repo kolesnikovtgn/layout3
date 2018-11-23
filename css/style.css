@@ -76,11 +76,13 @@ html {
 
 .header__search {
   margin-top: 35px;
-  max-width: 201px; /*20.9375%;*/
+  max-width: 201px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .header__search-input {
-  width: 158px; /*78.606%;*/
+  width: 158px;
   height: 33px;
   border: solid 1px #6D3D99;
   border-right: 0px;
@@ -89,7 +91,7 @@ html {
 }
 
 .header__search-button {
-  width: 42px; /*21%;*/
+  width: 42px;
   height: 33px;
   border: solid 1px #6D3D99;
   border-left: 0px;
@@ -107,7 +109,7 @@ html {
   max-width: 960px;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 94px;
+  margin-top: 24px;
 }
 
 .item {
@@ -133,7 +135,6 @@ html {
   background-position: center bottom;
   width: 76.190%;
   margin: 1.587% 11.904% 0 11.746%;
-  flex-wrap: nowrap;
 }
 
 .image-article {
@@ -633,30 +634,32 @@ html {
 .footer__images {
   width: 100%;
   position: relative;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .img-html {
-  margin: 17px 0 0 67px;
+  margin: 1.77% 0 0 6.979%;
   position: absolute;
 }
 
 .img-css {
-  margin: 24px 0 0 191px;
+  margin: 2.5% 0 0 19.895%;
   position: absolute;
 }
 
 .img-nodejs {
-  margin: 33px 0 0 312px;
+  margin: 3.4375% 0 0 32.5%;
   position: absolute;
 }
 
 .img-php {
-  margin: 22px 0 0 554px;
+  margin: 2.291% 0 0 57.708%;
   position: absolute;
 }
 
 .img-mysql {
-  margin: 30px 0 0 745px;
+  margin: 3.125% 0 0 77.504%;
   position: absolute;
 }
 
