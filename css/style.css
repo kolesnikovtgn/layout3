@@ -119,6 +119,7 @@ html {
   flex: 1;
   align-items: center;
   justify-content: center;
+  animation: bounce .5s;
 }
 
 .item p {
@@ -128,6 +129,39 @@ html {
 .item:hover {
   background-color: #FFC740;
   color: #FFFFFF;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
 }
 
 .main__image {
@@ -147,6 +181,98 @@ html {
   margin: 0 0 0 4.583%;
   padding-top: 16px;
 }
+
+.animate span {
+  display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+  animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+  animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+  animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+  animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+  animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+  animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+  animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+  animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+  animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+  animation-delay: .5s;
+}
+.animate span:nth-of-type(12) {
+  animation-delay: .55s;
+}
+.animate span:nth-of-type(13) {
+  animation-delay: .6s;
+}
+.animate span:nth-of-type(14) {
+  animation-delay: .65s;
+}
+.animate span:nth-of-type(15) {
+  animation-delay: .7s;
+}
+.animate span:nth-of-type(16) {
+  animation-delay: .75s;
+}
+.animate span:nth-of-type(17) {
+  animation-delay: .8s;
+}
+.animate span:nth-of-type(18) {
+  animation-delay: .85s;
+}
+.animate span:nth-of-type(19) {
+  animation-delay: .9s;
+}
+.animate span:nth-of-type(20) {
+  animation-delay: .95s;
+}
+.animate span:nth-of-type(21) {
+  animation-delay: 1s;
+}
+.animate span:nth-of-type(22) {
+  animation-delay: 1.05s;
+}
+.animate span:nth-of-type(23) {
+  animation-delay: 1.1s;
+}
+.animate span:nth-of-type(24) {
+  animation-delay: 1.15s;
+}
+
+.one span {
+  opacity: 0;
+  transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+  animation: revolveScale .4s forwards;
+}
+
+@keyframes revolveScale {
+  60% {
+    transform: translate(20px, 20px) rotate(30deg) scale(.3);
+  }
+
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
 
 .image-text {
   width: 46.979%;
@@ -214,10 +340,17 @@ html {
   overflow: hidden;
 }
 
-.article1_image img{
+.article1_image img {
   padding: 2px 2px 2px 2px;
   width: 134px;
   height: 133px;
+  animation: grow 0.6s;
+}
+
+@keyframes grow{
+  0%  { transform: scale(0) }
+  80% { transform: scale(1.1)}
+  100% { transform: scale(1) }
 }
 
 .article1__text-block {
@@ -275,10 +408,17 @@ html {
   overflow: hidden;
 }
 
-.article2_image img{
+.article2_image img {
   padding: 2px 2px 2px 2px;
   width: 134px;
   height: 133px;
+  animation: grow 0.6s;
+}
+
+@keyframes grow{
+  0%  { transform: scale(0) }
+  80% { transform: scale(1.1)}
+  100% { transform: scale(1) }
 }
 
 .article2__text-block {
@@ -336,10 +476,17 @@ html {
   overflow: hidden;
 }
 
-.article3_image img{
+.article3_image img {
   padding: 2px 2px 2px 2px;
   width: 134px;
   height: 133px;
+  animation: grow 0.6s;
+}
+
+@keyframes grow {
+  0%  { transform: scale(0) }
+  80% { transform: scale(1.1)}
+  100% { transform: scale(1) }
 }
 
 .article3__text-block {
@@ -397,10 +544,17 @@ html {
   overflow: hidden;
 }
 
-.article4_image img{
+.article4_image img {
   padding: 2px 2px 2px 2px;
   width: 134px;
   height: 133px;
+  animation: grow 0.6s;
+}
+
+@keyframes grow{
+  0%  { transform: scale(0) }
+  80% { transform: scale(1.1)}
+  100% { transform: scale(1) }
 }
 
 .article4__text-block {
