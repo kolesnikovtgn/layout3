@@ -823,7 +823,7 @@ html {
   display: flex;
   flex: 1;
   height: 115px;
-  margin-top: 144px;
+  margin-top: 44px;
 }
 
 .footer__company-text {
@@ -836,3 +836,24 @@ html {
   margin: 3.888% 0 0 41.904%;
 }
 
+.entertainment {
+  width: 74.69%;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 144px;
+}
+
+.videoContainer {
+  flex:2;
+  background-color: #6D3D99;
+}
+
+.audioContainer {
+  flex: 1;
+  background-color: #FFC740;
+}
+
+video {
+  width: 100%;
+  height: 300px;
+}
