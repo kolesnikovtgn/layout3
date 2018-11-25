@@ -838,29 +838,28 @@ html {
 
 .entertainment {
   width: 74.69%;
-  height: 300px;
+  height: auto;
   margin: 0 auto;
   margin-top: 144px;
 }
 
 .videoContainer {
   flex:2;
-  /*background-color: #6D3D99;*/
   background-color: #050505;
   border: 10px solid #6D3D99;
+  height: auto;
+}
 
+video {
+  width: 100%
+}
+
+.plyr {
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 .audioContainer {
   flex: 1;
   background-color: #FFC740;
-}
-
-video {
-  width: 100%;
-  height: 270px;
-}
-.plyr {
-  border-radius: 4px;
-  margin-bottom: 15px;
 }
