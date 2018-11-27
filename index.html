@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SUPER LOGO ON FLEXBOX</title>
+
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.4.7/plyr.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -244,7 +246,7 @@
         </div>
     </div>
 </main>
-    <footer class="footer">
+<footer class="footer">
         <div class="footer__line container-row">
             <div class="footer__square"></div>
             <div class="footer__headline">CLIENTS</div>
@@ -257,10 +259,53 @@
             <img class="img-php" src="images/php.png">
             <img class="img-mysql" src="images/mysql.png">
         </div>
-    </footer>
+</footer>
+<section class="">
+    <div class="entertainment container-column">
+        <div class="videoContainer">
+            <video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+
+                <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                       default>
+                <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+
+                <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            </video>
+        </div>
+        <div class="audioContainer">
+            <div class="player">
+                <canvas></canvas>
+                <audio>
+                    <source type="audio/mpeg"></source>
+                </audio>
+
+                <div class="song">
+                    <div class="artist">Awolnation</div>
+                    <div class="name">Sail</div>
+                </div>
+                <div class="playarea">
+                    <div class="prevSong"></div>
+                    <div class="play"></div>
+                    <div class="pause"></div>
+                    <div class="nextSong"></div>
+                </div>
+                <div class="soundControl"></div>
+                <div class="time">00:00</div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <div class="footer__company">
         <div class="footer__company-text"><p>Copyright &copy Lodoss Team 2018</p></div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/layout.js"></script>
 </body>
 </html>
