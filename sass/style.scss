@@ -1,0 +1,13 @@
+// Colors
+$line-theme : #9B51E0;
+$square-theme : #FFC740;
+$text-theme : #000000;
+$rect-theme : #6D3D99;
+$border-player : #3E3F3F;
+$back-player : #AA483F;
+
+@import "header/header.scss";
+
+@import "main/main.scss";
+
+@import "footer/footer.scss";
