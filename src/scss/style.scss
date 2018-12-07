@@ -6,8 +6,8 @@ $rect-theme : #6D3D99;
 $border-player : #3E3F3F;
 $back-player : #AA483F;
 
-@import "header/header.scss";
+@import "header/header";
 
-@import "main/main.scss";
+@import "main/main";
 
-@import "footer/footer.scss";
+@import "footer/footer";
