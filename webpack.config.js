@@ -1,7 +1,9 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'none',
     entry: './src/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -9,7 +11,11 @@ module.exports = {
     },
     watch: true,
     devServer: {
-      contentBase: './'
+      contentBase: './',
+      inline: true,
+      watchContentBase: true,
+      compress: true,
+      port: 9001
     },
     module: {
         rules: [
