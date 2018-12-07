@@ -11,11 +11,11 @@ module.exports = {
     },
     watch: true,
     devServer: {
-      contentBase: './',
+        contentBase: path.join(__dirname, "./dist/"),
       inline: true,
       watchContentBase: true,
       compress: true,
-      port: 9001
+      port: 9000
     },
     module: {
         rules: [
@@ -25,10 +25,26 @@ module.exports = {
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })
+            },
+            {
+                test: /\.(png|jp(e*)g|svg)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        name: 'images/[hash]-[name].[ext]'
+                    }
+                }]
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('style.css'),
+        new HtmlWebpackPlugin({
+            hash: true,
+            title: 'SUPER LOGO',
+            template: './src/index.html',
+            path: path.join(__dirname, "./dist/"),
+            filename: 'index.html'
+        })
     ]
 };
