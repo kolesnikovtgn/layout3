@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.4.7/plyr.css">
     <link rel="stylesheet" href="../dist/style.css">
 </head>
-<body>
 <div class="page">
     <div class="topline"></div>
 <header class="header__main container-column">
@@ -36,7 +35,20 @@
     </div>
 </header>
 <main class="main__image container-column">
-    <img id="mountain" class="main__image-picture" src="images/Mountains-and-hills-julian-alps.png">
+    <!--<img id="mountain" class="main__image-picture" src="images/Mountains-and-hills-julian-alps.png">-->
+
+    <div class="slider">
+        <button id="left-btn" class="slider__left-btn">&laquo;</button>
+        <div class="slider__scroll">
+            <ul id="items" class="slider__items">
+                <li class="item__image"><img id="rain" class="main__image-rain" src="images/rain.jpeg"></li>
+                <li class="item__image"><img id="lake" class="main__image-lake" src="images/lake.jpeg"></li>
+                <li class="item__image"><img id="notebook" class="main__image-notebook" src="images/notebook.jpeg"></li>
+            </ul>
+        </div>
+        <button id="right-btn" class="slider__right-btn">&raquo;</button>
+    </div>
+
     <div class="image-article animate one">
         <span>A</span><span>l</span><span>i</span><span>q</span><span>u</span><span>a</span><span>m</span>&nbsp;
         <span>p</span><span>h</span><span>a</span><span>r</span><span>e</span><span>t</span><span>r</span><span>a</span>
@@ -307,6 +319,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="../dist/bundle.js"></script>
 </body>
 </html>

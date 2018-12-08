@@ -143,6 +143,98 @@ html {
     background-position: center bottom;
     position: absolute; }
 
+.slider {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin: auto;
+  position: absolute; }
+
+.slider button {
+  width: 30px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  outline: none;
+  opacity: 0.5;
+  transition: opacity 300ms ease-out;
+  position: absolute; }
+  .slider button:hover {
+    opacity: 1; }
+
+.slider__left-btn {
+  margin-top: 150px; }
+
+.slider__right-btn {
+  margin: 150px 0 0 930px; }
+
+.scroller {
+  flex: 1;
+  overflow: hidden; }
+
+.items__images {
+  list-style-type: none;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+  transition: transform 1s ease-in-out; }
+
+.item_image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-weight: bold;
+  background-size: cover;
+  background-position: 50% 50%;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); }
+  .item_image:nth-child(2) {
+    color: #fff; }
+  .item_image img {
+    background-position: center bottom; }
+
+.slider .scroller {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  box-sizing: border-box;
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
+
+.slider__items {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  box-sizing: border-box;
+  font-size: 0;
+  line-height: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  white-space: nowrap; }
+
+.slider__items .item__image {
+  background-position: 50% 50%;
+  background-size: cover;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  width: 100%; }
+
 .image-article {
   font-size: 6.4rem;
   line-height: 7.4rem;

@@ -1,6 +1,7 @@
 import './js/layout.js';
+import './js/slider.js';
 import './scss/style.scss';
-import mountainPng from './images/Mountains-and-hills-julian-alps.png';
+// import mountainPng from './images/Mountains-and-hills-julian-alps.png';
 import bbcPng from './images/bbc.png';
 import carPng from './images/car.png';
 import css3Png from './images/css3.png';
@@ -13,9 +14,13 @@ import mobilePng from './images/mobile.png';
 import mysqlPng from './images/mysql.png';
 import nodejsPng from './images/nodejs.png';
 import phpPng from './images/php.png';
+import lakeJpeg from './images/lake.jpeg';
+import notebookJpeg from './images/notebook.jpeg';
+import rainJpeg from './images/rain.jpeg';
 
-var mountain = document.getElementById('mountain');
-mountain.src = mountainPng;
+
+// var mountain = document.getElementById('mountain');
+// mountain.src = mountainPng;
 
 var bbc = document.getElementById('bbc');
 bbc.src = bbcPng;
@@ -52,3 +57,12 @@ nodejs.src = nodejsPng;
 
 var php = document.getElementById('php');
 php.src = phpPng;
+
+var lake = document.getElementById('lake');
+lake.src = lakeJpeg;
+
+var notebook = document.getElementById('notebook');
+notebook.src = notebookJpeg;
+
+var rain = document.getElementById('rain');
+rain.src = rainJpeg;
