@@ -1,24 +1,24 @@
-"use strict";
+'use strict';
 window.onload=function(event) {
   event.preventDefault();
 
   const leftBtn = document.getElementById('left-btn');
   const rightBtn = document.getElementById('right-btn');
-  var items = document.getElementById('items');
-  var itemCount = document.querySelectorAll('.item__image').length;
-  var pos = 0;
-  var transform = Modernizr.prefixed('transform');
+  const items = document.getElementById('items');
+  let itemCount = document.querySelectorAll('.item__image').length;
+  let pos = 0;
+  let transform = Modernizr.prefixed('transform');
 
-  function setTransform() {
+  let setTransform = () => {
     items.style[transform] = 'translate3d(' + (-pos * items.offsetWidth) + 'px,0,0)';
   }
 
-  function prev() {
+  let prev = () => {
     pos = Math.max(pos - 1, 0);
     setTransform();
   }
 
-  function next() {
+  let next = () => {
     pos = Math.min(pos + 1, itemCount - 1);
     setTransform();
   }
