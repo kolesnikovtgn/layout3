@@ -1,13 +1,11 @@
-sudo: false
-
 language: node_js
 node_js:
 - 9
 
 script:
-- npm run lint
+#- npm run lint
 - npm run build
-- npm start
+#- npm start
 deploy:
   provider: pages
   skip_cleanup: false
