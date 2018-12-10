@@ -1,0 +1,350 @@
+@keyframes grow{
+  0%  { transform: scale(0) }
+  80% { transform: scale(1.1)}
+  100% { transform: scale(1) }
+}
+
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 12.777% 0 12.619%;
+  justify-content: space-between;
+}
+
+.article1 {
+  margin-top: 3.125%;
+  &__square {
+    background-color: $rect-theme;
+    width: 16px;
+    height: 16px;
+  }
+  &__headline {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $text-theme;
+    margin-left: 1.086%;
+    width: 133px;
+    height: 17px;
+  }
+  &__rectangle {
+    background-color: $rect-theme;
+    width: 301px;
+    height: 16px;
+    margin-left: 1.086%;
+  }
+  &_image {
+    width: 138px;
+    height: 137px;
+    margin: 13px 0 0 0;
+    border: solid 2px $square-theme;
+    overflow: hidden;
+    img {
+      padding: 2px 2px 2px 2px;
+      width: 134px;
+      height: 133px;
+      animation: grow 0.6s;
+    }
+  }
+  &__text {
+    width: 300px;
+    height: 105px;
+    margin: 16px 0 0 20px;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: justify;
+    }
+    &-block {
+      align-content: space-between;
+    }
+  }
+  &__footer {
+    margin: 16px 0 0 20px;
+    span {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.article2 {
+  margin-top: 3.125%;
+  &__square {
+    @extend .article1__square;
+    background-color: $square-theme;
+  }
+  &__headline {
+    @extend .article1__headline;
+    width: 152px;
+    height: 17px;
+  }
+  &__rectangle {
+    @extend .article1__rectangle;
+    background-color: $square-theme;
+    width: 283px;
+  }
+  &_image {
+    @extend .article1_image;
+    img {
+      padding: 2px 2px 2px 2px;
+      width: 134px;
+      height: 133px;
+      animation: grow 0.6s;
+    }
+  }
+  &__text {
+    @extend .article1__text;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: justify;
+    }
+    &-block {
+      @extend .article1__text-block;
+    }
+  }
+  &__footer {
+    @extend .article1__footer;
+    span {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.article3 {
+  margin-top: 3.125%;
+  &__square {
+    @extend .article1__square;
+    background-color: $square-theme;
+  }
+  &__headline {
+    @extend .article1__headline;
+  }
+  &__rectangle {
+    @extend .article1__rectangle;
+    background-color: $square-theme;
+  }
+  &_image {
+    @extend .article1_image;
+    img {
+      padding: 2px 2px 2px 2px;
+      width: 134px;
+      height: 133px;
+      animation: grow 0.6s;
+    }
+  }
+  &__text {
+    @extend .article1__text;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: justify;
+    }
+    &-block {
+      @extend .article1__text-block;
+    }
+  }
+  &__footer {
+    @extend .article1__footer;
+    span {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.article4 {
+  margin-top: 3.125%;
+  &__square {
+    @extend .article1__square;
+  }
+  &__headline {
+    @extend .article1__headline;
+    width: 152px;
+  }
+  &__rectangle {
+    @extend .article1__rectangle;
+    width: 283px;
+    height: 16px;
+  }
+  &_image {
+    @extend .article1_image;
+    img {
+      padding: 2px 2px 2px 2px;
+      width: 134px;
+      height: 133px;
+      animation: grow 0.6s;
+    }
+  }
+  &__text {
+    @extend .article1__text;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: justify;
+    }
+    &-block {
+      @extend .article1__text-block;
+    }
+  }
+  &__footer {
+    @extend .article1__footer;
+    span {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.article5 {
+  margin-top: 3.125%;
+  &__square {
+    background-color: $square-theme;
+    width: 16px;
+    height: 16px;
+  }
+  &__headline {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $text-theme;
+    margin-left: 5px;
+    width: 65px;
+    height: 17px;
+  }
+  &__rectangle {
+    background-color: $square-theme;
+    width: 212px;
+    height: 16px;
+    margin-left: 5px;
+  }
+  &__text {
+    width: 300px;
+    height: 105px;
+    margin: 16px 0 0 0;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: justify;
+    }
+    &-block {
+      align-content: space-between;
+    }
+  }
+  &__footer {
+    margin: 16px 0 0 0;
+    span {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.article6 {
+  margin-top: 3.125%;
+  &__square {
+    background-color: $rect-theme;
+    width: 16px;
+    height: 16px;
+  }
+  &__headline {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $text-theme;
+    margin-left: 5px;
+    width: 100px;
+    height: 17px;
+  }
+  &__rectangle {
+    background-color: $rect-theme;
+    width: 177px;
+    height: 16px;
+    margin-left: 5px;
+  }
+  &__text-block {
+    align-content: space-between;
+  }
+  &__post1 {
+    margin-top: 16px;
+  }
+  &__post2 {
+    margin-top: 6px;
+  }
+  &__post3 {
+    margin-top: 6px;
+  }
+}
+
+.post1__description {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: justify;
+  width: 251px;
+  height: 29px;
+  margin: 3px 0 0 0;
+}
+
+.post2__description {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: justify;
+  width: 251px;
+  height: 29px;
+  margin: 3px 0 0 0;
+}
+
+.post3__description {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: justify;
+  width: 251px;
+  height: 29px;
+  margin: 3px 0 0 0;
+}
+
+.article7 {
+  margin-top: 3.125%;
+  &__square {
+    background-color: $square-theme;
+    width: 16px;
+    height: 16px;
+  }
+  &__headline {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $text-theme;
+    margin-left: 5px;
+    width: 65px;
+    height: 17px;
+  }
+  &__rectangle {
+    background-color: $square-theme;
+    width: 212px;
+    height: 16px;
+    margin-left: 5px;
+  }
+  &__text {
+    width: 300px;
+    height: 105px;
+    margin: 16px 0 0 0;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: justify;
+    }
+    &-block {
+      align-content: space-between;
+    }
+  }
+  &__footer {
+    margin: 16px 0 0 0;
+    span {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.post1__text, .post2__text, .post3__text {
+  margin-left: 10px;
+}
