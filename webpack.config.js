@@ -7,50 +7,50 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   watch: true,
   devServer: {
-    contentBase: path.join(__dirname, "./dist/"),
+    contentBase: path.join(__dirname, './dist/'),
     inline: true,
     watchContentBase: true,
     compress: true,
-    port: 9000
+    port: 9000,
   },
   module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
-      },
-      {
-        test: /\.(png|jp(e*)g|svg)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            name: 'images/[hash]-[name].[ext]'
-          }
-        }]
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader",
-      },
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+      rules: [
+          {
+              test: /\.scss$/,
+              use: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+                  use: ['css-loader', 'sass-loader'],
+              }),
+          },
+          {
+              test: /\.(png|jp(e*)g|svg)$/,
+              use: [{
+                  loader: 'url-loader',
+                  options: {
+                      name: 'images/[hash]-[name].[ext]',
+                  },
+              }],
+          },
+          {
+              test: /\.m?js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                  loader: 'babel-loader',
+                  options: {
+                      presets: ['@babel/preset-env'],
+                  },
+              },
+          },
+          {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              loader: 'eslint-loader',
+          },
+      ],
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
@@ -58,8 +58,8 @@ module.exports = {
       hash: true,
       title: 'SUPER LOGO',
       template: './src/index.html',
-      path: path.join(__dirname, "./dist/"),
-      filename: 'index.html'
-    })
-  ]
+      path: path.join(__dirname, './dist/'),
+      filename: 'index.html',
+    }),
+  ],
 };

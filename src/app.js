@@ -1,5 +1,5 @@
-import './js/layout.js';
-import './js/slider.js';
+// import './js/layout.js';
+import './js/slider';
 import './scss/style.scss';
 // import mountainPng from './images/Mountains-and-hills-julian-alps.png';
 import bbcPng from './images/bbc.png';
@@ -22,47 +22,47 @@ import rainJpeg from './images/rain.jpeg';
 // var mountain = document.getElementById('mountain');
 // mountain.src = mountainPng;
 
-var bbc = document.getElementById('bbc');
+const bbc = document.getElementById('bbc');
 bbc.src = bbcPng;
 
-var car = document.getElementById('car');
+const car = document.getElementById('car');
 car.src = carPng;
 
-var css3 = document.getElementById('css3');
+const css3 = document.getElementById('css3');
 css3.src = css3Png;
 
-var dog = document.getElementById('dog');
+const dog = document.getElementById('dog');
 dog.src = dogPng;
 
-var girl = document.getElementById('girl');
+const girl = document.getElementById('girl');
 girl.src = girlPng;
 
-var html5 = document.getElementById('html5');
+const html5 = document.getElementById('html5');
 html5.src = html5Png;
 
-var Jobs = document.getElementById('Jobs');
+const Jobs = document.getElementById('Jobs');
 Jobs.src = JobsPng;
 
-var koala = document.getElementById('koala');
+const koala = document.getElementById('koala');
 koala.src = koalaPng;
 
-var mobile = document.getElementById('mobile');
+const mobile = document.getElementById('mobile');
 mobile.src = mobilePng;
 
-var mysql = document.getElementById('mysql');
+const mysql = document.getElementById('mysql');
 mysql.src = mysqlPng;
 
-var nodejs = document.getElementById('nodejs');
+const nodejs = document.getElementById('nodejs');
 nodejs.src = nodejsPng;
 
-var php = document.getElementById('php');
+const php = document.getElementById('php');
 php.src = phpPng;
 
-var lake = document.getElementById('lake');
+const lake = document.getElementById('lake');
 lake.src = lakeJpeg;
 
-var notebook = document.getElementById('notebook');
+const notebook = document.getElementById('notebook');
 notebook.src = notebookJpeg;
 
-var rain = document.getElementById('rain');
+const rain = document.getElementById('rain');
 rain.src = rainJpeg;
