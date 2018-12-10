@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
-  watch: true,
+  watch: false,
   devServer: {
     contentBase: path.join(__dirname, './dist/'),
     inline: true,
@@ -18,39 +18,39 @@ module.exports = {
     port: 9000,
   },
   module: {
-      rules: [
-          {
-              test: /\.scss$/,
-              use: ExtractTextPlugin.extract({
-                  fallback: 'style-loader',
-                  use: ['css-loader', 'sass-loader'],
-              }),
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        }),
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            name: 'images/[hash]-[name].[ext]',
           },
-          {
-              test: /\.(png|jp(e*)g|svg)$/,
-              use: [{
-                  loader: 'url-loader',
-                  options: {
-                      name: 'images/[hash]-[name].[ext]',
-                  },
-              }],
+        }],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
           },
-          {
-              test: /\.m?js$/,
-              exclude: /(node_modules|bower_components)/,
-              use: {
-                  loader: 'babel-loader',
-                  options: {
-                      presets: ['@babel/preset-env'],
-                  },
-              },
-          },
-          {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              loader: 'eslint-loader',
-          },
-      ],
+        },
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+    ],
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
