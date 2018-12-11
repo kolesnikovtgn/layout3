@@ -6,9 +6,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open --config webpack.config.js",
-    "lint": "eslint",
-    "test": "eslint ./src/js/slider.js"
+    "start": "webpack-dev-server --open --config webpack.config.js"
   },
   "repository": {
     "type": "git",
