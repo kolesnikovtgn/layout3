@@ -13,5 +13,5 @@ deploy:
   local_dir: dist
   branches:
     only:
-    - master
-    - ci
+    - gh-pages
+    - /.*/
