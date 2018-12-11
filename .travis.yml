@@ -13,4 +13,5 @@ deploy:
   local_dir: dist
   branches:
     only:
+    - master
     - ci
