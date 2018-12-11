@@ -1,7 +1,7 @@
 window.onload = (event) => {
   event.preventDefault();
 
-  const leftBtn = document.getElementById('left-btn');
+  let leftBtn = document.getElementById('left-btn');
   const rightBtn = document.getElementById('right-btn');
   const items = document.getElementById('items');
   const itemCount = document.querySelectorAll('.item__image').length;
