@@ -1,3 +1,4 @@
+const _ = require('lodash');
 
 function getJson(type, paras, sentence, idOutput) {
   $.getJSON('https://baconipsum.com/api/?callback=?',
@@ -34,4 +35,8 @@ $(document).ready(() => {
   getJson('all-meat', '0', '1', '#post1');
   getJson('all-meat', '0', '1', '#post2');
   getJson('all-meat', '0', '1', '#post3');
+
+  const tmp = _.template($('#image_random').html());
+  const $main = $('#main');
+  $main.html(tmp({ random: _.random(1, 2000) }));
 });
