@@ -20,19 +20,17 @@ function getJson(type, paras, sentence, idOutput) {
 //   return _.random(1, 50);
 // }
 
-function getImage(id, url) {
+function setImage(id, url) {
   $(id).append(`<img src="${url}">`);
 }
 
-function httpGet(url, callback) {
+function httpGetImage(id, url) {
   const xmlHttp = new XMLHttpRequest();
   xmlHttp.open('GET', url);
   xmlHttp.send();
   xmlHttp.onreadystatechange = () => {
     if (xmlHttp.readyState === 4) {
-      resultUrl = xmlHttp.responseURL;
-
-      callback.apply(this, [resultUrl]);
+      setImage(id, xmlHttp.responseURL);
     }
   };
 }
@@ -49,15 +47,13 @@ $(document).ready(() => {
     getJson('all-meat', '0', '1', '#post2');
     getJson('all-meat', '0', '1', '#post3');
 
-    getImage('#img1', 400, 400);
-    getImage('#img2', 400, 400);
-    getImage('#img3', 400, 400);
-    getImage('#img4', 400, 400);
-    getImage('#pimg1', 50, 40);
-    getImage('#pimg2', 50, 40);
-    getImage('#pimg3', 50, 40);
-    httpGet('https://picsum.photos/200/300/?random');
-    console.log(resultUrl);
+    httpGetImage('#img1', 'https://picsum.photos/400/400/?random');
+    httpGetImage('#img2', 'https://picsum.photos/400/400/?random');
+    httpGetImage('#img3', 'https://picsum.photos/400/400/?random');
+    httpGetImage('#img4', 'https://picsum.photos/400/400/?random');
+    httpGetImage('#pimg1', 'https://picsum.photos/50/40/?random');
+    httpGetImage('#pimg2', 'https://picsum.photos/50/40/?random');
+    httpGetImage('#pimg3', 'https://picsum.photos/50/40/?random');
   });
   getJson('all-meat', '3', '0', '#blog1');
   getJson('meat-and-filler', '2', '0', '#blog2');
@@ -69,11 +65,11 @@ $(document).ready(() => {
   getJson('all-meat', '0', '1', '#post2');
   getJson('all-meat', '0', '1', '#post3');
 
-  getImage('#img1', 400, 400);
-  getImage('#img2', 400, 400);
-  getImage('#img3', 400, 400);
-  getImage('#img4', 400, 400);
-  getImage('#pimg1', 50, 40);
-  getImage('#pimg2', 50, 40);
-  getImage('#pimg3', 50, 40);
+  httpGetImage('#img1', 'https://picsum.photos/400/400/?random');
+  httpGetImage('#img2', 'https://picsum.photos/400/400/?random');
+  httpGetImage('#img3', 'https://picsum.photos/400/400/?random');
+  httpGetImage('#img4', 'https://picsum.photos/400/400/?random');
+  httpGetImage('#pimg1', 'https://picsum.photos/50/40/?random');
+  httpGetImage('#pimg2', 'https://picsum.photos/50/40/?random');
+  httpGetImage('#pimg3', 'https://picsum.photos/50/40/?random');
 });
