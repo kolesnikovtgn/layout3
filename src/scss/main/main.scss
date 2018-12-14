@@ -47,8 +47,9 @@
   }
   &__text {
     width: 300px;
-    height: 105px;
+    height: 107px;
     margin: 16px 0 0 20px;
+    overflow: hidden;
     p {
       font-size: 1.2rem;
       line-height: 1.4rem;
@@ -220,8 +221,9 @@
   }
   &__text {
     width: 300px;
-    height: 105px;
+    height: 107px;
     margin: 16px 0 0 0;
+    overflow: hidden;
     p {
       font-size: 1.2rem;
       line-height: 1.4rem;
@@ -275,13 +277,20 @@
   }
 }
 
+.post1__img, .post2__img, .post3__img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
 .post1__description {
   font-size: 1.2rem;
   line-height: 1.4rem;
   text-align: justify;
   width: 251px;
-  height: 29px;
+  height: 27px;
   margin: 3px 0 0 0;
+  overflow: hidden;
 }
 
 .post2__description {
@@ -289,8 +298,9 @@
   line-height: 1.4rem;
   text-align: justify;
   width: 251px;
-  height: 29px;
+  height: 27px;
   margin: 3px 0 0 0;
+  overflow: hidden;
 }
 
 .post3__description {
@@ -298,8 +308,9 @@
   line-height: 1.4rem;
   text-align: justify;
   width: 251px;
-  height: 29px;
+  height: 27px;
   margin: 3px 0 0 0;
+  overflow: hidden;
 }
 
 .article7 {
@@ -325,8 +336,9 @@
   }
   &__text {
     width: 300px;
-    height: 105px;
+    height: 107px;
     margin: 16px 0 0 0;
+    overflow: hidden;
     p {
       font-size: 1.2rem;
       line-height: 1.4rem;

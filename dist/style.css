@@ -377,8 +377,9 @@ html {
       animation: grow 0.6s; }
   .article1__text, .article2__text, .article3__text, .article4__text {
     width: 300px;
-    height: 105px;
-    margin: 16px 0 0 20px; }
+    height: 107px;
+    margin: 16px 0 0 20px;
+    overflow: hidden; }
     .article1__text p, .article2__text p, .article3__text p, .article4__text p {
       font-size: 1.2rem;
       line-height: 1.4rem;
@@ -473,8 +474,9 @@ html {
     margin-left: 5px; }
   .article5__text {
     width: 300px;
-    height: 105px;
-    margin: 16px 0 0 0; }
+    height: 107px;
+    margin: 16px 0 0 0;
+    overflow: hidden; }
     .article5__text p {
       font-size: 1.2rem;
       line-height: 1.4rem;
@@ -514,29 +516,37 @@ html {
   .article6__post3 {
     margin-top: 6px; }
 
+.post1__img, .post2__img, .post3__img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden; }
+
 .post1__description {
   font-size: 1.2rem;
   line-height: 1.4rem;
   text-align: justify;
   width: 251px;
-  height: 29px;
-  margin: 3px 0 0 0; }
+  height: 27px;
+  margin: 3px 0 0 0;
+  overflow: hidden; }
 
 .post2__description {
   font-size: 1.2rem;
   line-height: 1.4rem;
   text-align: justify;
   width: 251px;
-  height: 29px;
-  margin: 3px 0 0 0; }
+  height: 27px;
+  margin: 3px 0 0 0;
+  overflow: hidden; }
 
 .post3__description {
   font-size: 1.2rem;
   line-height: 1.4rem;
   text-align: justify;
   width: 251px;
-  height: 29px;
-  margin: 3px 0 0 0; }
+  height: 27px;
+  margin: 3px 0 0 0;
+  overflow: hidden; }
 
 .article7 {
   margin-top: 3.125%; }
@@ -558,8 +568,9 @@ html {
     margin-left: 5px; }
   .article7__text {
     width: 300px;
-    height: 105px;
-    margin: 16px 0 0 0; }
+    height: 107px;
+    margin: 16px 0 0 0;
+    overflow: hidden; }
     .article7__text p {
       font-size: 1.2rem;
       line-height: 1.4rem;
