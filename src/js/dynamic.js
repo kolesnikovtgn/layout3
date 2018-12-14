@@ -1,7 +1,3 @@
-// const _ = require('lodash');
-
-let resultUrl;
-
 function getJson(type, paras, sentence, idOutput) {
   $.getJSON('https://baconipsum.com/api/?callback=?',
     {
@@ -16,11 +12,8 @@ function getJson(type, paras, sentence, idOutput) {
     });
 }
 
-// function generateNumber() {
-//   return _.random(1, 50);
-// }
-
 function setImage(id, url) {
+  $(id).html('');
   $(id).append(`<img src="${url}">`);
 }
 
