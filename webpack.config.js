@@ -1,6 +1,8 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
 
 module.exports = {
   mode: 'none',
@@ -13,53 +15,57 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, './dist/'),
     inline: true,
+    hot: true,
     watchContentBase: true,
     compress: true,
     port: 9000,
   },
   module: {
-      rules: [
-          {
-              test: /\.scss$/,
-              use: ExtractTextPlugin.extract({
-                  fallback: 'style-loader',
-                  use: ['css-loader', 'sass-loader'],
-              }),
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        }),
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            name: 'images/[hash]-[name].[ext]',
           },
-          {
-              test: /\.(png|jp(e*)g|svg)$/,
-              use: [{
-                  loader: 'url-loader',
-                  options: {
-                      name: 'images/[hash]-[name].[ext]',
-                  },
-              }],
+        }],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
           },
-          {
-              test: /\.m?js$/,
-              exclude: /(node_modules|bower_components)/,
-              use: {
-                  loader: 'babel-loader',
-                  options: {
-                      presets: ['@babel/preset-env'],
-                  },
-              },
-          },
-          {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              loader: 'eslint-loader',
-          },
-      ],
+        },
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+    ],
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin({
+      filename: 'style.css',
+      disable: process.env.NODE_ENV !== 'production',
+    }),
     new HtmlWebpackPlugin({
-      hash: true,
       title: 'SUPER LOGO',
       template: './src/index.html',
       path: path.join(__dirname, './dist/'),
       filename: 'index.html',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };
