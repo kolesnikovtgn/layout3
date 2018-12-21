@@ -210,9 +210,11 @@ window.onload = function (event) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 // removed by extract-text-webpack-plugin
+    if(false) { var cssReload; }
+  
 
 /***/ }),
 /* 3 */,
