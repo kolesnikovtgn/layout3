@@ -3,13 +3,13 @@ import './js/slider';
 import './js/dynamic';
 import './scss/style.scss';
 // import mountainPng from './images/Mountains-and-hills-julian-alps.png';
-// import bbcPng from './images/bbc.png';
-// import carPng from './images/car.png';
+import bbcPng from './images/bbc.png';
+import carPng from './images/car.png';
 // import dogPng from './images/dog.png';
 // import girlPng from './images/girl.png';
 // import JobsPng from './images/Jobs.png';
 // import koalaPng from './images/koala.png';
-// import mobilePng from './images/mobile.png';
+import mobilePng from './images/mobile.png';
 import html5Png from './images/html5.png';
 import css3Png from './images/css3.png';
 import mysqlPng from './images/mysql.png';
@@ -23,11 +23,11 @@ import rainJpeg from './images/rain.jpeg';
 // var mountain = document.getElementById('mountain');
 // mountain.src = mountainPng;
 
-// const bbc = document.getElementById('bbc');
-// bbc.src = bbcPng;
-//
-// const car = document.getElementById('car');
-// car.src = carPng;
+const bbc = document.getElementById('bbc');
+bbc.src = bbcPng;
+
+const car = document.getElementById('car');
+car.src = carPng;
 
 const css3 = document.getElementById('css3');
 css3.src = css3Png;
@@ -47,8 +47,8 @@ html5.src = html5Png;
 // const koala = document.getElementById('koala');
 // koala.src = koalaPng;
 
-// const mobile = document.getElementById('mobile');
-// mobile.src = mobilePng;
+const mobile = document.getElementById('mobile');
+mobile.src = mobilePng;
 
 const mysql = document.getElementById('mysql');
 mysql.src = mysqlPng;
