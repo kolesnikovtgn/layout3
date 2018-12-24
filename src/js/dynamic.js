@@ -19,27 +19,34 @@ const article = (i, text, urlImage, headLineText) => `
   </div>
 `;
 
-function getArticle(styleArticleNum, paras, headLineText) {
-  const textHttp = new XMLHttpRequest();
-  const imageHttp = new XMLHttpRequest();
-  textHttp.open('GET', `https://baconipsum.com/api/?callback=?type=all-meat&start-with-lorem=0&paras=${paras}&sentence=0`);
-  imageHttp.open('GET', 'https://picsum.photos/500/400/?random');
-  textHttp.send();
-  imageHttp.send();
-  textHttp.onreadystatechange = () => {
-    if (textHttp.readyState === 4) {
-      imageHttp.onreadystatechange = () => {
-        if (imageHttp.readyState === 4) {
-          $('#article').prepend(article(styleArticleNum, JSON.parse(textHttp.responseText), imageHttp.responseURL, headLineText));
-        }
-      };
-    }
-  };
+function httpGetData(method, url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.onload = () => {
+      if (this.status === 200) {
+        resolve(xhr);
+      } else {
+        reject();
+      }
+    };
+    xhr.onerror = () => {
+      reject();
+    };
+    xhr.send();
+  });
 }
 
 $(document).ready(() => {
   $('#baconButton').click(() => {
-    getArticle(1, 3, 'ABOUT SUPER LOGO');
-    getArticle(2, 3, 'SOME WORDS OUR CEO');
+    Promise.all([httpGetData('GET', 'https://baconipsum.com/api/?callback=?type=all-meat&start-with-lorem=0&paras=3&sentence=0'),
+      httpGetData('GET', 'https://picsum.photos/30/30/?random')])
+      .then((results) => {
+        $('#article').prepend(article(1, JSON.parse(results[0].responseText),
+          results[1].responseURL, 'ABOUT SUPER LOGO'));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
 });
