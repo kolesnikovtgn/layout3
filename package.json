@@ -20,6 +20,7 @@
   "homepage": "https://github.com/kolesnikovtgn/layout3#readme",
   "devDependencies": {
     "@babel/core": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.2.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-lodash": "^3.3.4",
