@@ -359,8 +359,9 @@ html {
 
 .article1__text {
   width: 300px;
-  height: 105px;
+  height: 109px;
   margin: 16px 0 0 20px;
+  overflow: hidden;
 }
 
 .article1__text p {
@@ -427,8 +428,9 @@ html {
 
 .article2__text {
   width: 300px;
-  height: 105px;
+  height: 109px;
   margin: 16px 0 0 20px;
+  overflow: hidden;
 }
 
 .article2__text p {
@@ -495,8 +497,9 @@ html {
 
 .article3__text {
   width: 300px;
-  height: 105px;
+  height: 109px;
   margin: 16px 0 0 20px;
+  overflow: hidden;
 }
 
 .article3__text p {
@@ -563,8 +566,9 @@ html {
 
 .article4__text {
   width: 300px;
-  height: 105px;
+  height: 109px;
   margin: 16px 0 0 20px;
+  overflow: hidden;
 }
 
 .article4__text p {
