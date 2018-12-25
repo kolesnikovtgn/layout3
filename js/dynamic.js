@@ -18,33 +18,33 @@ const article = (i, text, urlImage) => `
   </div>
   </div>
 `;
+
+function httpGetData (method, url) {
+  return new Promise((resolve, reject) => {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.onload =  () => {
+      if (xhr.status === 200) {
+        resolve(xhr);
+      } else {
+        reject();
+      }
+    };
+    xhr.onerror =  () => {
+      reject();
+    };
+    xhr.send();
+  });
+}
+
 $(document).ready(function() {
     $("#baconButton").click(function() {
-
     Promise.all([httpGetData('GET', 'https://baconipsum.com/api/?callback=?type=all-meat&start-with-lorem=0&paras=3&sentence=0'), httpGetData('GET', 'https://picsum.photos/400/400/?random')])
         .then((results) => {
-            $('#article').prepend(article(1, results[0].responseText, results[1].responseURL));
+            $('#article').prepend(article(1, JSON.parse(results[0].responseText), results[1].responseURL));
         })
         .catch((err) => {
             console.log(err);
           });
 });
 });
-
-  function httpGetData (method, url) {
-    return new Promise((resolve, reject) => {
-      var xhr = new XMLHttpRequest();
-      xhr.open(method, url);
-      xhr.onload = function () {
-        if (this.status === 200) {
-          resolve(xhr);
-        } else {
-          reject();
-        }
-      };
-      xhr.onerror = () => {
-        reject();
-      };
-      xhr.send();
-    });
-  }
