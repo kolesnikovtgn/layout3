@@ -377,7 +377,7 @@ html {
       animation: grow 0.6s; }
   .article1__text, .article2__text, .article3__text, .article4__text {
     width: 300px;
-    height: 107px;
+    height: 109px;
     margin: 16px 0 0 20px;
     overflow: hidden; }
     .article1__text p, .article2__text p, .article3__text p, .article4__text p {
@@ -637,7 +637,7 @@ html {
   display: flex;
   flex: 1;
   height: 115px;
-  margin-top: 744px; }
+  margin-top: 20px; }
   .footer__company-text {
     font-size: 1.4rem;
     font-weight: bold;
@@ -670,7 +670,8 @@ video {
   flex: 1;
   height: 100%;
   background-color: #1E2426;
-  position: relative; }
+  position: relative;
+  display: none; }
 
 .player {
   width: 740px;

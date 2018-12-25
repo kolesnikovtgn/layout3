@@ -1,8 +1,8 @@
-const article = (i, text, urlImage, headLineText) => `
+const article = (i, text, urlImage) => `
   <div class="article${i}">
   <div class="article${i}__header container-row">
       <div class="article${i}__square"></div>
-      <div class="article${i}__headline">${headLineText}</div>
+      <div class="article${i}__headline">ABOUT SUPER LOGO</div>
       <div class="article${i}__rectangle"></div>
   </div>
   <div class="article${i}__body container-row">
@@ -39,11 +39,9 @@ function httpGetData(method, url) {
 
 $(document).ready(() => {
   $('#baconButton').click(() => {
-    Promise.all([httpGetData('GET', 'https://baconipsum.com/api/?callback=?type=all-meat&start-with-lorem=0&paras=3&sentence=0'),
-      httpGetData('GET', 'https://picsum.photos/30/30/?random')])
+    Promise.all([httpGetData('GET', 'https://baconipsum.com/api/?callback=?type=all-meat&start-with-lorem=0&paras=3&sentence=0'), httpGetData('GET', 'https://picsum.photos/400/400/?random')])
       .then((results) => {
-        $('#article').prepend(article(1, JSON.parse(results[0].responseText),
-          results[1].responseURL, 'ABOUT SUPER LOGO'));
+        $('#article').prepend(article(1, results[0].responseText, results[1].responseURL));
       })
       .catch((err) => {
         console.log(err);
