@@ -1,6 +1,6 @@
+require('es6-promise').polyfill();
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -62,10 +62,6 @@ module.exports = {
       template: './src/index.html',
       path: path.join(__dirname, './dist/'),
       filename: 'index.html',
-    }),
-    new LodashModuleReplacementPlugin({
-      collections: true,
-      paths: true,
     }),
   ],
 };
