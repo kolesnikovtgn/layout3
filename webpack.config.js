@@ -1,11 +1,10 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'none',
-  entry: './src/app.js',
+  entry: ['@babel/polyfill', './src/app.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -62,10 +61,6 @@ module.exports = {
       template: './src/index.html',
       path: path.join(__dirname, './dist/'),
       filename: 'index.html',
-    }),
-    new LodashModuleReplacementPlugin({
-      collections: true,
-      paths: true,
     }),
   ],
 };
