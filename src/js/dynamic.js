@@ -45,10 +45,8 @@ async function asyncGetData() {
 }
 
 $(document).ready(() => {
-  $('#baconButton').click(() => {
-    asyncGetData()
-      .then((data) => {
-        $('#article').prepend(article(1, JSON.parse(data[0].responseText), data[1].responseURL));
-      });
+  $('#baconButton').click(async () => {
+    const data = await asyncGetData();
+    $('#article').prepend(article(1, JSON.parse(data[0].responseText), data[1].responseURL));
   });
 });
